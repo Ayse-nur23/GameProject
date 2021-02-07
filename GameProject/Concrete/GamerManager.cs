@@ -4,13 +4,14 @@ using System.Text;
 
 namespace GameProject
 {
-     class GamerManager :IGamerService
+    public class GamerManager :IGamerService
     {
+
         IUserValidationService _userValidationService;
 
-        public GamerManager(IUserValidationService userValidation)
+        public GamerManager(IUserValidationService userValidationService)
         {
-            _userValidationService = userValidation;
+            _userValidationService = userValidationService;
         }
 
         public void Add(Gamer gamer)
@@ -23,7 +24,7 @@ namespace GameProject
             {
                 Console.WriteLine("Doğrulama başarız.Kayıt başarısız.");
             }
-           
+
         }
 
         public void Delete(Gamer gamer)
@@ -33,7 +34,7 @@ namespace GameProject
 
         public void Update(Gamer gamer)
         {
-            Console.WriteLine("Kullanıcı  güncellendi.");        
+            Console.WriteLine("Kullanıcı  güncellendi.");
         }
     }
 

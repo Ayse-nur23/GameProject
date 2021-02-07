@@ -1,15 +1,12 @@
-﻿using System;
+﻿using GameProject.Abstract;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace GameProject
 {
-    interface IGameService
+    public interface IGameService:IEntityRepository<Game>
     {
-        void Add(Game game);
-        void Update(Game game);
-        void Delete(Game game);
-
         
     }
 }

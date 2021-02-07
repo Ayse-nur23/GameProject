@@ -1,13 +1,11 @@
-﻿using System;
+﻿using GameProject.Abstract;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace GameProject
 {
-   public interface ICampaign
+   public interface ICampaign:IEntityRepository<Campaign>
     {
-        void Add(Campaign campaign);
-        void Delete(Campaign campaign);
-        void Update(Campaign campaign);
     }
 }

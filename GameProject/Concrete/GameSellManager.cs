@@ -1,14 +1,16 @@
-﻿using System;
+﻿using GameProject.Abstract;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace GameProject.Concrete
 {
-    class GameSellManager :SellService
+    public class GameSellManager :ISellService
     {
-        public override void Sell(Game game, Gamer gamer)
+
+        public void Sell(Game game, Gamer gamer,Campaign campaign=null)
         {
-            Console.WriteLine("{0} Oyunu {1} tarafıdan  {2} TL'ye satın alındı.", game.GameName, gamer.FristName,game.UnitPrice);
+            Console.WriteLine("{0} Oyunu {1} tarafıdan  {2} TL'ye satın alındı.", game.GameName, gamer.FristName, game.UnitPrice);
         }
     }
 }

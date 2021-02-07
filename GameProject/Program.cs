@@ -1,4 +1,6 @@
-﻿using System;
+﻿using GameProject.Abstract;
+using GameProject.Concrete;
+using System;
 
 namespace GameProject
 {
@@ -26,11 +28,13 @@ namespace GameProject
 
 
             CampaingManager campaingManager = new CampaingManager();
-            var campaing = new Campaign { Id = 1, Name = "Yeni Gelen Özel %10 indirim", campaignDiscount = 10 };
+            var campaing = new Campaign { Id = 1, Name = "Yeni Gelenlere Özel %10 indirim", campaignDiscount = 10 };
             campaingManager.Add(campaing);
 
-            SellService sellService = new CampaingSellManager();
-            sellService.CampaingSell(game,gamer,campaing);
+            ISellService sellService = new CampaingSellManager();
+            sellService.Sell(game, gamer,campaing);
+
+            
         }
     }
 }

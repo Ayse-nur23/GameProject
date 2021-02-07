@@ -1,13 +1,12 @@
-﻿using System;
+﻿using GameProject.Abstract;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace GameProject
 {
-    interface IGamerService
+    public interface IGamerService :IEntityRepository<Gamer>
     {
-        void Add(Gamer gamer);
-        void Update(Gamer gamer);
-        void Delete(Gamer gamer);
+        
     }
 }

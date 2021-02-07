@@ -16,8 +16,6 @@ namespace GameProject
             Console.WriteLine("Oyun silindi.");     
         }
 
-
-      
         public void Update(Game game)
         {
             Console.WriteLine("Oyun güncellendi.");
